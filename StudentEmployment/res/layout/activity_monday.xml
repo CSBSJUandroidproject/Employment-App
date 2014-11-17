@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#750A0A"
+     >
+     
+    <LinearLayout 
+     	android:orientation = "vertical"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:gravity = "start"	
+    >
+    <CheckBox android:id="@+id/eighta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/eighta"
+        android:textColor="#FFFFFF"
+        />
+    <CheckBox android:id="@+id/eightthirtya"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/eightthirtya"
+        android:textColor="#FFFFFF"
+        />
+    <CheckBox android:id="@+id/ninea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ninea"
+        android:textColor="#FFFFFF"
+        />
+    <CheckBox android:id="@+id/ninethirtya"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ninethirtya"
+        android:textColor="#FFFFFF"
+        />
+  
+    <CheckBox android:id="@+id/tena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tena"
+        android:textColor="#FFFFFF"
+        />
+    <CheckBox android:id="@+id/tenthirtya"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tenthirtya"
+        android:textColor="#FFFFFF"
+        />
+    <CheckBox android:id="@+id/elevena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/elevena"
+        android:textColor="#FFFFFF"
+        />
+     
+    <CheckBox android:id="@+id/eleventhirtya"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/eleventhirtya"
+        android:textColor="#FFFFFF"
+        />
+
+     <CheckBox android:id="@+id/twelvep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/twelvep"
+        android:textColor="#FFFFFF"
+        />
+     <CheckBox android:id="@+id/twelvethirtyp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/twelvethirtyp"
+        android:textColor="#FFFFFF"
+        />
+    <CheckBox android:id="@+id/onep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/onep"
+        android:textColor="#FFFFFF"
+        />
+    </LinearLayout>
+    <LinearLayout 
+     	android:orientation = "vertical"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    >
+    <CheckBox android:id="@+id/onethirtyp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/onethirtyp"
+        android:textColor="#FFFFFF"
+        />
+    <CheckBox android:id="@+id/twop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/twop"
+        android:textColor="#FFFFFF"
+        />
+     
+    <CheckBox android:id="@+id/twothirtyp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/twothirtyp"
+        android:textColor="#FFFFFF"
+        />
+   
+    
+    <CheckBox android:id="@+id/threep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/threep"
+        android:textColor="#FFFFFF"
+        />
+    <CheckBox android:id="@+id/threethirtyp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/threethirtyp"
+        android:textColor="#FFFFFF"
+        />
+    <CheckBox android:id="@+id/fourp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fourp"
+        android:textColor="#FFFFFF"
+        />
+    
+    <CheckBox android:id="@+id/fourthirtyp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fourthirtyp"
+        android:textColor="#FFFFFF"
+        />
+    <CheckBox android:id="@+id/fivep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fivep"
+        android:textColor="#FFFFFF"
+        />
+    
+    <CheckBox android:id="@+id/fivethirtyp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fivethirtyp"
+        android:textColor="#FFFFFF"
+        />
+    
+    <CheckBox android:id="@+id/sixp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sixp"
+        android:textColor="#FFFFFF"
+        />
+    <CheckBox android:id="@+id/sixthirtyp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sixthirtyp"
+        android:textColor="#FFFFFF"
+        />
+     </LinearLayout>
+    <LinearLayout 
+     	android:orientation = "vertical"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    >
+    <CheckBox android:id="@+id/sevenp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sevenp"
+        android:textColor="#FFFFFF"
+        />
+    <CheckBox android:id="@+id/seventhirtyp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/seventhirtyp"
+        android:textColor="#FFFFFF"
+        />
+   
+    <CheckBox android:id="@+id/eightp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/eightp"
+        android:textColor="#FFFFFF"
+        />
+    <CheckBox android:id="@+id/eightthirtyp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/eightthirtyp"
+        android:textColor="#FFFFFF"
+        />
+    
+    <CheckBox android:id="@+id/ninep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ninep"
+        android:textColor="#FFFFFF"
+        />
+    
+    <CheckBox android:id="@+id/ninethirtyp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ninethirtyp"
+        android:textColor="#FFFFFF"
+        />
+    
+    <CheckBox android:id="@+id/tenp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tenp"
+        android:textColor="#FFFFFF"
+        />
+    <CheckBox android:id="@+id/tenthirtyp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tenthirtyp"
+        android:textColor="#FFFFFF"
+        />
+    <CheckBox android:id="@+id/elevenp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/elevenp"
+        android:textColor="#FFFFFF"
+        />
+    <CheckBox android:id="@+id/eleventhirtyp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/eleventhirtyp"
+        android:textColor="#FFFFFF"
+        />
+    <CheckBox android:id="@+id/twelvea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/twelvea"
+        android:textColor="#FFFFFF"
+        />
+    <Button
+     android:id="@+id/btnDisplay"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="@string/btn_display" 
+     android:textColor="#FFFFFF"
+     android:onClick="saveMonday" />
+     
+</LinearLayout>
+
+</LinearLayout>
+
+
