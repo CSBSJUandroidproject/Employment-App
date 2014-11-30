@@ -2,6 +2,8 @@ package com.example.studentemployment;
 
 import android.support.v7.app.ActionBarActivity;
 
+import 	android.util.Log;
+
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,22 +28,28 @@ public class MainActivity extends ActionBarActivity {
 	private EditText username = null;
 	private EditText password = null;
 	private Button login;
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		username = (EditText) findViewById(R.id.editText1);
+		System.out.println(username);
 		password = (EditText) findViewById(R.id.editText2);
+		System.out.println(password);
 		login = (Button) findViewById(R.id.button1);
 	}
 
 	public void login(View view) {
-		//String u = username.getText().toString();
-		//String p = password.getText().toString();
-		if (doInBackground("admin", "admin").equals("true")) {
+		String u = (String)username.getText().toString();
+		System.out.println(u);
+		String p = (String)password.getText().toString();
+		System.out.println(p);
+		if (doInBackground(u,p).equals("true")) {
 			Toast.makeText(getApplicationContext(), "Redirecting...",
 					Toast.LENGTH_SHORT).show();
+			//Go to main page instead
+			//Count how many times user has logged in
 			Intent intent = new Intent(this, Monday.class);
 			startActivity(intent);
 		} else {
@@ -50,10 +58,14 @@ public class MainActivity extends ActionBarActivity {
 		}
 	}
 
-	protected static String doInBackground(String... arg0) {
-		/**try {
+	protected String doInBackground(String... arg0) {
+		try {
 			String username = (String) arg0[0];
+			System.out.println(username);
+			//String username = "admin";
 			String password = (String) arg0[1];
+			System.out.println(password);
+			//String password = "admin";
 			String link = "http://csbsjustudentemployment.org/app_accessor_php/login.php";
 			String data = URLEncoder.encode("username", "UTF-8") + "="
 					+ URLEncoder.encode(username, "UTF-8");
@@ -66,6 +78,7 @@ public class MainActivity extends ActionBarActivity {
 					conn.getOutputStream());
 			wr.write(data);
 			wr.flush();
+			
 			BufferedReader reader = new BufferedReader(new InputStreamReader(
 					conn.getInputStream()));
 			StringBuilder sb = new StringBuilder();
@@ -75,14 +88,13 @@ public class MainActivity extends ActionBarActivity {
 				sb.append(line);
 				break;
 			}
+			System.out.println(sb);
 			return sb.toString();
 		} catch (Exception e) {
 			return new String("Exception: " + e.getMessage());
-		}**/
-		String t = "true";
-		return t; 
+		}
 	}
-
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
