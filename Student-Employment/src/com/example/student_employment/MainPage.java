@@ -9,6 +9,8 @@ import android.content.Intent;
 
 public class MainPage extends ActionBarActivity {
 
+	public static final String Use_Pass = "username&password";
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
