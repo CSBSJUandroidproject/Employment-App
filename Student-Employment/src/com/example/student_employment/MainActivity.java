@@ -1,6 +1,5 @@
 package com.example.student_employment;
 
-
 import android.support.v7.app.ActionBarActivity;
 
 import 	android.util.Log;
@@ -43,23 +42,28 @@ public class MainActivity extends ActionBarActivity {
 
 	public void login(View view) {
 		String u = (String)username.getText().toString();
-		System.out.println(u);
 		String p = (String)password.getText().toString();
-		System.out.println(p);
 		if (doInBackground(u,p).equals("true")) {
+			//username carry over to next intent to main page > view hours
 			Toast.makeText(getApplicationContext(), "Redirecting...",
 					Toast.LENGTH_SHORT).show();
-			//Go to main page instead
+			
 			//Count how many times user has logged in
-			Intent intent = new Intent(this, Monday.class);
+			Intent intent = new Intent(MainActivity.this, MainPage.class);
 			startActivity(intent);
+			intent.putExtra(username, u);
 		} else {
 			Toast.makeText(getApplicationContext(), "Wrong Credentials",
 					Toast.LENGTH_SHORT).show();
 		}
 	}
-
-	protected String doInBackground(String... arg0) {
+	public void sendMessage(View view){
+		Intent intent = new Intent(this, MainPage.class);
+		EditText username = (EditText) findViewById(R.id.username);
+		String message = username.getText().toString();
+		intent.putExtra(EXTRA_MESSAGE, message);
+	}
+	protected static String doInBackground(String... arg0) {
 		try {
 			String username = (String) arg0[0];
 			//String username = "admin";
@@ -74,8 +78,11 @@ public class MainActivity extends ActionBarActivity {
 			URL url = new URL(link);
 			URLConnection conn = url.openConnection();
 			conn.setDoOutput(true);
+			conn.setDoOutput(true);
+			
 			OutputStreamWriter wr = new OutputStreamWriter(
 					conn.getOutputStream());
+			System.out.println("here");
 			wr.write(data);
 			wr.flush();
 			
@@ -88,7 +95,6 @@ public class MainActivity extends ActionBarActivity {
 				sb.append(line);
 				break;
 			}
-			
 			return sb.toString();
 		} catch (Exception e) {
 			return new String("Exception: " + e.getMessage());
