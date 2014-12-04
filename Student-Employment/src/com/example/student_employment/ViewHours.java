@@ -3,9 +3,6 @@ package com.example.student_employment;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 
-import DB;
-import displayTime;
-import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
