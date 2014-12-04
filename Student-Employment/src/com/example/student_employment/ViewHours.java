@@ -1,5 +1,8 @@
 package com.example.student_employment;
 
+import java.text.SimpleDateFormat;
+import java.util.Locale;
+
 import DB;
 import displayTime;
 import android.support.v7.app.ActionBarActivity;
@@ -12,11 +15,12 @@ public class ViewHours extends ActionBarActivity {
 	public static String dows="";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		Intent intent.getIntent();
+		SimpleDateFormat dayFormat = new SimpleDateFormat("EEEE",Locale.US);
+		Intent intent = getIntent();
 		String username,password;
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_view);
-		String message = intent.getStringExtra(MainActivity.Use_Pass);
+		String message = intent.getStringExtra(MainPage.Use_Pass);
 		String[] parts=message.split(" ");
 		username=parts[0];
 		password=parts[1];
