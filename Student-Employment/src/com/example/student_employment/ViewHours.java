@@ -1,19 +1,29 @@
 package com.example.student_employment;
 
+import DB;
+import displayTime;
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class View extends ActionBarActivity {
-
+public class ViewHours extends ActionBarActivity {
+	public static String dows="";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		Intent intent.getIntent();
+		String username,password;
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_view);
 		String message = intent.getStringExtra(MainActivity.Use_Pass);
+		String[] parts=message.split(" ");
+		username=parts[0];
+		password=parts[1];
+		displayTime dt=new displayTime();
+		String timeString=DB.doInBackground(username,password);
+		String odt=dt.selectDayOfWeek(1,timeString);
+		String result=dt.timePeriod(odt);
 	}
 
 	@Override
