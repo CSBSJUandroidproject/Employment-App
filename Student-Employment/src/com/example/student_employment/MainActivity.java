@@ -51,7 +51,7 @@ public class MainActivity extends ActionBarActivity {
 			Intent intent = new Intent(this, MainPage.class);
 			EditText username = (EditText) findViewById(R.id.editText1);
 			EditText password = (EditText) findViewById(R.id.editText2);
-			String message = username.getText().toString() + password.getText().toString();
+			String message = username.getText().toString()+" " + password.getText().toString();
 			startActivity(intent);
 			intent.putExtra(Use_Pass, message);
 		} /**else {

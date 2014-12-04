@@ -1,6 +1,7 @@
 package com.example.student_employment;
 
 import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -9,8 +10,10 @@ public class View extends ActionBarActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		Intent intent.getIntent();
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_view);
+		String message = intent.getStringExtra(MainActivity.Use_Pass);
 	}
 
 	@Override
