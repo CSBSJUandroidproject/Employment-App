@@ -60,5 +60,6 @@
     <string name="title_activity_view">View</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_view_hours">ViewHours</string>
+    <string name="display_hours_string"></string>
 
 </resources>

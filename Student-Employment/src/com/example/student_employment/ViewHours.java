@@ -27,6 +27,7 @@ public class ViewHours extends ActionBarActivity {
 		String timeString=DB.doInBackground(username,password);
 		String odt=dt.selectDayOfWeek(1,timeString);
 		String result=dt.timePeriod(odt);
+		
 	}
 
 	@Override
