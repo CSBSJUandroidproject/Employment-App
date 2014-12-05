@@ -10,7 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class ViewHours extends ActionBarActivity {
-	/**
+	
 	public static String dows="";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -46,5 +46,5 @@ public class ViewHours extends ActionBarActivity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
-	}**/
+	}
 }
