@@ -41,28 +41,23 @@ public class MainActivity extends ActionBarActivity {
 	}
 
 	public void login(View view) {
-		String u = (String)username.getText().toString();
-		String p = (String)password.getText().toString();
-		if (doInBackground(u,p).equals("true")) {
+		//String u = (String)username.getText().toString();
+		//String p = (String)password.getText().toString();
+		//if (doInBackground(u,p).equals("true")) {
 			//username carry over to next intent to main page > view hours
 			Toast.makeText(getApplicationContext(), "Redirecting...",
 					Toast.LENGTH_SHORT).show();
 			
 			//Count how many times user has logged in
-			//Intent intent = new Intent(MainActivity.this, MainPage.class);
-			Intent intent = new Intent(MainActivity.this, Monday.class);
-			//EditText username = (EditText) findViewById(R.id.editText1);
-			//EditText password = (EditText) findViewById(R.id.editText2);
-			//String message = username.getText().toString()+" " + password.getText().toString();
-			//intent.putExtra(Use_Pass, message);
+			Intent intent = new Intent(MainActivity.this, MainPage.class);
+			String message = username.getText().toString()+" " + password.getText().toString();
+			intent.putExtra(Use_Pass, message);
 			startActivity(intent);
 			
-		} else {
+		} /**else {
 			Toast.makeText(getApplicationContext(), "Wrong Credentials",
 					Toast.LENGTH_SHORT).show();
 		}
-	}
-	
 	protected static String doInBackground(String... arg0) {
 		try {
 			String username = (String) arg0[0];
@@ -99,7 +94,7 @@ public class MainActivity extends ActionBarActivity {
 		} catch (Exception e) {
 			return new String("Exception: " + e.getMessage());
 		}
-	}
+	}**/
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

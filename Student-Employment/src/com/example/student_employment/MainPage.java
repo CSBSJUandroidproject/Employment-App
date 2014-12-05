@@ -10,10 +10,11 @@ import android.content.Intent;
 public class MainPage extends ActionBarActivity {
 
 	public static final String Use_Pass = "username&password";
-
+	public String message = "";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		Intent intent = getIntent();
+		message = intent.getStringExtra(MainPage.Use_Pass);
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_page);
 	}
@@ -38,11 +39,13 @@ public class MainPage extends ActionBarActivity {
 	}
 	
 	public void submitHours(View view){
-		//Intent intent = new Intent(this, Monday.class);
-		//startActivity(intent);
-	}
-	/**public void viewSched(){
-		Intent intent = new Intent(this, ViewSched.class);
+		Intent intent = new Intent(MainPage.this, Monday.class);
+		intent.putExtra(Use_Pass, message);
 		startActivity(intent);
-	};**/
+	}
+	public void viewSched(){
+		Intent intent = new Intent(MainPage.this, ViewHours.class);
+		intent.putExtra(Use_Pass, message);
+		startActivity(intent);
+	}
 }
