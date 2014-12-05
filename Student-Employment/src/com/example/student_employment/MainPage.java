@@ -13,6 +13,7 @@ public class MainPage extends ActionBarActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		Intent intent = getIntent();
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_page);
 	}
@@ -37,8 +38,8 @@ public class MainPage extends ActionBarActivity {
 	}
 	
 	public void submitHours(View view){
-		Intent intent = new Intent(this, Monday.class);
-		startActivity(intent);
+		//Intent intent = new Intent(this, Monday.class);
+		//startActivity(intent);
 	}
 	/**public void viewSched(){
 		Intent intent = new Intent(this, ViewSched.class);

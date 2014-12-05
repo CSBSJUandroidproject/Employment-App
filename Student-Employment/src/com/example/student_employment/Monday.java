@@ -20,6 +20,9 @@ onep, onethirtyp, twop, twothirtyp, threep, threethirtyp, fourp, fourthirtyp, fi
 sixp, sixthirtyp, sevenp, seventhirtyp, eightp, eightthirtyp, 
 ninep, ninethirtyp, tenp, tenthirtyp, elevenp, eleventhirtyp, twelvep, twelvethirtyp;
 private Button btnDisplay;
+public final static String BusyHours ="busyHours";
+//public final static String hours = "0000000000000000";
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -119,9 +122,24 @@ public void addListenerOnButton() {
 	});
  
   }
+//checks status of each checkbox
+public String busyHours(){
+	String hours = "0000000000000000";
+	if (eighta.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	System.out.println(hours);
+	return hours;
+}
+//goes to next page and keeps BusyHours 
 public void saveMonday(View view){   
-    Intent intent = new Intent(this, Tuesday.class);
-    startActivity(intent);
+	Intent intent = new Intent(this, Tuesday.class);
+	String message = busyHours();
+	intent.putExtra(BusyHours, message);
+	startActivity(intent);
 }
 @Override
 public boolean onCreateOptionsMenu(Menu menu) {

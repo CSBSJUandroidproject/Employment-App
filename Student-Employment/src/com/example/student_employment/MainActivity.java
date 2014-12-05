@@ -26,15 +26,16 @@ import java.net.URLEncoder;
 
 public class MainActivity extends ActionBarActivity {
 	public final static String Use_Pass = "username&password";
-	//private EditText username = null;
-	//private EditText password = null;
+	private EditText username = null;
+	private EditText password = null;
 	private Button login;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
+		EditText username = (EditText) findViewById(R.id.editText1);
+		EditText password = (EditText) findViewById(R.id.editText2);
 		login = (Button) findViewById(R.id.button1);
 		//ImageView image = (ImageView) findViewById(R.id.logo_image);
 	}
@@ -42,23 +43,25 @@ public class MainActivity extends ActionBarActivity {
 	public void login(View view) {
 		String u = (String)username.getText().toString();
 		String p = (String)password.getText().toString();
-		//if (doInBackground(u,p).equals("true")) {
+		if (doInBackground(u,p).equals("true")) {
 			//username carry over to next intent to main page > view hours
 			Toast.makeText(getApplicationContext(), "Redirecting...",
 					Toast.LENGTH_SHORT).show();
 			
 			//Count how many times user has logged in
-			Intent intent = new Intent(this, MainPage.class);
-			EditText username = (EditText) findViewById(R.id.editText1);
-			EditText password = (EditText) findViewById(R.id.editText2);
-			String message = username.getText().toString()+" " + password.getText().toString();
+			//Intent intent = new Intent(MainActivity.this, MainPage.class);
+			Intent intent = new Intent(MainActivity.this, Monday.class);
+			//EditText username = (EditText) findViewById(R.id.editText1);
+			//EditText password = (EditText) findViewById(R.id.editText2);
+			//String message = username.getText().toString()+" " + password.getText().toString();
+			//intent.putExtra(Use_Pass, message);
 			startActivity(intent);
-			intent.putExtra(Use_Pass, message);
-		} /**else {
+			
+		} else {
 			Toast.makeText(getApplicationContext(), "Wrong Credentials",
 					Toast.LENGTH_SHORT).show();
-		}**/
-	
+		}
+	}
 	
 	protected static String doInBackground(String... arg0) {
 		try {
