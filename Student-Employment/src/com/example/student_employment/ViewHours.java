@@ -11,14 +11,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class ViewHours extends ActionBarActivity {
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_view_hours);
+		//setContentView(R.layout.activity_view_hours);
 		SimpleDateFormat dayFormat = new SimpleDateFormat("EEEE",Locale.US);
 		Intent intent = getIntent();
-		String message = intent.getStringExtra(MainPage.Use_Pass);
+		String message = intent.getStringExtra(MainActivity.Use_Pass);
+		
 		String username,password;
 		String[] parts=message.split(" ");
 		username=parts[0];
@@ -33,7 +34,7 @@ public class ViewHours extends ActionBarActivity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.view_hours, menu);
+		//getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 

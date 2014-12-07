@@ -25,7 +25,8 @@ import java.net.URLConnection;
 import java.net.URLEncoder;
 
 public class MainActivity extends ActionBarActivity {
-	public final static String Use_Pass = "username&password";
+	//public static String message = "";
+	public final static String Use_Pass = "com.example.student_employment.main_activity";
 	private EditText username = null;
 	private EditText password = null;
 	private Button login;
@@ -34,67 +35,27 @@ public class MainActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		EditText username = (EditText) findViewById(R.id.editText1);
-		EditText password = (EditText) findViewById(R.id.editText2);
+		username = (EditText) findViewById(R.id.editText1);
+		password = (EditText) findViewById(R.id.editText2);
 		login = (Button) findViewById(R.id.button1);
 		//ImageView image = (ImageView) findViewById(R.id.logo_image);
 	}
 
 	public void login(View view) {
-		//String u = (String)username.getText().toString();
-		//String p = (String)password.getText().toString();
-		//if (doInBackground(u,p).equals("true")) {
 			//username carry over to next intent to main page > view hours
 			Toast.makeText(getApplicationContext(), "Redirecting...",
 					Toast.LENGTH_SHORT).show();
 			
 			//Count how many times user has logged in
 			Intent intent = new Intent(MainActivity.this, MainPage.class);
+			username = (EditText) findViewById(R.id.editText1);
+			password = (EditText) findViewById(R.id.editText2);
 			String message = username.getText().toString()+" " + password.getText().toString();
+			System.out.println("MainActivity" + message);
 			intent.putExtra(Use_Pass, message);
 			startActivity(intent);
 			
-		} /**else {
-			Toast.makeText(getApplicationContext(), "Wrong Credentials",
-					Toast.LENGTH_SHORT).show();
-		}
-	protected static String doInBackground(String... arg0) {
-		try {
-			String username = (String) arg0[0];
-			//String username = "admin";
-			String password = (String) arg0[1];
-			//String password = "admin";
-			String link = "http://csbsjustudentemployment.org/app_accessor_php/login.php";
-			//String link = "www.csbsjustudentemployment.org/app_accessor_php/login.php";
-			String data = URLEncoder.encode("username", "UTF-8") + "="
-					+ URLEncoder.encode(username, "UTF-8");
-			data += "&" + URLEncoder.encode("password", "UTF-8") + "="
-					+ URLEncoder.encode(password, "UTF-8");
-			URL url = new URL(link);
-			URLConnection conn = url.openConnection();
-			conn.setDoOutput(true);
-			conn.setDoOutput(true);
-			
-			OutputStreamWriter wr = new OutputStreamWriter(
-					conn.getOutputStream());
-			System.out.println("here");
-			wr.write(data);
-			wr.flush();
-			
-			BufferedReader reader = new BufferedReader(new InputStreamReader(
-					conn.getInputStream()));
-			StringBuilder sb = new StringBuilder();
-			String line = null;
-			// Read Server Response
-			while ((line = reader.readLine()) != null) {
-				sb.append(line);
-				break;
-			}
-			return sb.toString();
-		} catch (Exception e) {
-			return new String("Exception: " + e.getMessage());
-		}
-	}**/
+		} 
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

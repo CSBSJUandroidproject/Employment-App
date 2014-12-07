@@ -1,6 +1,6 @@
 package com.example.student_employment;
 
-
+/**
 public class displayTime {
 	public displayTime(){
 		super();
@@ -78,4 +78,4 @@ public class displayTime {
 		return result;
 	}
 	
-}
+}**/

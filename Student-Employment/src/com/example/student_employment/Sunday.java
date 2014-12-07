@@ -3,6 +3,7 @@ package com.example.student_employment;
 import android.support.v7.app.ActionBarActivity;
 //import android.content.Intent;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -109,7 +110,10 @@ public void addListenerOnButton() {
  
 		Toast.makeText(Sunday.this, result.toString(),
 				Toast.LENGTH_LONG).show();
-		
+		Toast.makeText(getApplicationContext(), "Your hours have been submitted",
+				Toast.LENGTH_SHORT).show();
+		Intent i=new Intent(Sunday.this, MainPage.class);
+        startActivity(i);
  
 	  }
 	});
