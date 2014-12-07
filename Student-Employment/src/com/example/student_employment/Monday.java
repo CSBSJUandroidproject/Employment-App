@@ -29,7 +29,6 @@ public final static String BusyHours ="busyHours";
 		setContentView(R.layout.activity_monday);
 		//btnDisplay = (Button)findViewById(R.id.btnDisplay);
 		addListenerOnButton();
-		
 	}
 	
 public void addListenerOnButton() {
@@ -113,9 +112,13 @@ public void addListenerOnButton() {
  
 		Toast.makeText(Monday.this, result.toString(),
 				Toast.LENGTH_LONG).show();
-		
-		Intent i=new Intent(Monday.this, Tuesday.class);
-        startActivity(i);
+		busyHours();
+		Intent intent = new Intent(Monday.this, Tuesday.class);
+		String message = busyHours();
+		intent.putExtra(BusyHours, message);
+		startActivity(intent);
+		//Intent i=new Intent(Monday.this, Tuesday.class);
+        //startActivity(i);
 	  }
 	  
 	  
@@ -131,16 +134,203 @@ public String busyHours(){
 	else{
 		hours = hours +"0";
 	}
-	System.out.println(hours);
+	if (eightthirtya.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (ninea.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (ninethirtya.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (tena.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (tenthirtya.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (elevena.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (eleventhirtya.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (twelvea.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (onep.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (onethirtyp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (twop.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (twothirtyp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (threep.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (threethirtyp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (fourp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (fourthirtyp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (fivep.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (fivethirtyp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (sixp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (sixthirtyp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (sevenp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (seventhirtyp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (eightp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (eightthirtyp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (ninep.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (ninethirtyp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (tenp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (tenthirtyp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (elevenp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (eleventhirtyp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (twelvep.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (twelvethirtyp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	
 	return hours;
 }
 //goes to next page and keeps BusyHours 
-public void saveMonday(View view){   
-	Intent intent = new Intent(this, Tuesday.class);
-	String message = busyHours();
-	intent.putExtra(BusyHours, message);
-	startActivity(intent);
-}
+
 @Override
 public boolean onCreateOptionsMenu(Menu menu) {
     // Inflate the menu; this adds items to the action bar if it is present.

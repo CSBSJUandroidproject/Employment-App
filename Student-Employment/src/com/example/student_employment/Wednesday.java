@@ -17,11 +17,13 @@ onep, onethirtyp, twop, twothirtyp, threep, threethirtyp, fourp, fourthirtyp, fi
 sixp, sixthirtyp, sevenp, seventhirtyp, eightp, eightthirtyp, 
 ninep, ninethirtyp, tenp, tenthirtyp, elevenp, eleventhirtyp, twelvep, twelvethirtyp;
 private Button btnDisplay;
+public final static String BusyHours3 ="busyHours";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_monday);
 		addListenerOnButton();
+		
 		
 	}
 	
@@ -109,12 +111,220 @@ public void addListenerOnButton() {
  
 		Toast.makeText(Wednesday.this, result.toString(),
 				Toast.LENGTH_LONG).show();
-		Intent i=new Intent(Wednesday.this, Thursday.class);
-        startActivity(i);
+		busyHours();
+		Intent intent = new Intent(Wednesday.this, Thursday.class);
+		String message = busyHours();
+		intent.putExtra(BusyHours3, message);
+		startActivity(intent);
  
 	  }
 	});
  
   }
+public String busyHours(){
+	Intent intent = getIntent();
+	String hours = intent.getStringExtra(Tuesday.BusyHours2);
+	if (eighta.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (eightthirtya.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (ninea.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (ninethirtya.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (tena.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (tenthirtya.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (elevena.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (eleventhirtya.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (twelvea.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (onep.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (onethirtyp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (twop.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (twothirtyp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (threep.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (threethirtyp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (fourp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (fourthirtyp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (fivep.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (fivethirtyp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (sixp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (sixthirtyp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (sevenp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (seventhirtyp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (eightp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (eightthirtyp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (ninep.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (ninethirtyp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (tenp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (tenthirtyp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (elevenp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (eleventhirtyp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (twelvep.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	if (twelvethirtyp.isChecked()){
+		hours = hours + "1";
+	}
+	else{
+		hours = hours +"0";
+	}
+	
+	return hours;
+}
+	
 	
 }
