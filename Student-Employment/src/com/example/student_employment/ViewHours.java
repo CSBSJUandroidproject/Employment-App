@@ -5,7 +5,6 @@ import java.util.Calendar;
 import java.util.Locale;
 
 import android.support.v7.app.ActionBarActivity;
-import com.example.student_employment.R;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
