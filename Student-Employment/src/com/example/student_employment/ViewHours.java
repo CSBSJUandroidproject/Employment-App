@@ -5,14 +5,12 @@ import java.util.Calendar;
 import java.util.Locale;
 
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.appcompat.R;
+import com.example.student_employment.R;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 public class ViewHours extends ActionBarActivity {
 	public static String dows="";
