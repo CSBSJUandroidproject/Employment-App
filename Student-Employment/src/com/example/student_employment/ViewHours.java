@@ -7,6 +7,7 @@ import java.util.Locale;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.appcompat.R;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,13 +16,13 @@ import android.widget.TextView;
 
 public class ViewHours extends ActionBarActivity {
 	public static String dows="";
-	private TextView myText = null;
 	private String weekDay="";
 	private int wkDay;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_view_hours);
 		SimpleDateFormat dayFormat = new SimpleDateFormat("EEEE",Locale.US);
 		Calendar calendar = Calendar.getInstance();
 		weekDay = dayFormat.format(calendar.getTime());
@@ -56,14 +57,11 @@ public class ViewHours extends ActionBarActivity {
 		String timeString=DB.doInBackground(username,password);
 		String odt=dt.selectDayOfWeek(wkDay,timeString);
 		String result=dt.timePeriod(odt);
-		LinearLayout lView = new LinearLayout(this);
-
-		myText = new TextView(this);
-		myText.setText(dows+"\n"+result);
-
-		lView.addView(myText);
-
-		setContentView(lView);
+		Resources res = getResources();
+		String text = String.format(
+		    res.getString(R.string.display_hours_string),
+		    result);
+		
 		
 	}
 
